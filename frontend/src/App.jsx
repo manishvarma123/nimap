@@ -4,6 +4,8 @@ import MainLayout from './Components/MainLayout'
 import Home from './Components/Home'
 import TopRated from './Components/TopRated'
 import Upcoming from './Components/Upcoming'
+import MovieDetail from './Components/MovieDetail'
+import SearchMovie from './Components/SearchMovie'
 
 
 const router = createBrowserRouter([
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
       {
         path : '/upcoming',
         element : <Upcoming />
+      },
+      {
+        path : '/:id/movie-detail',
+        element : <MovieDetail />
+      },
+      {
+        path : '/search',
+        element : <SearchMovie />
       }
     ]
   }

@@ -13,7 +13,7 @@ const MainLayout = () => {
         </div>
 
         <div className="w-full bg-black/80 flex-1 overflow-y-auto">
-          <div className="w-full max-w-[1200px] m-auto p-2">
+          <div className="w-full h-full max-w-[1200px] m-auto p-2 lg:py-5">
             <Outlet />
           </div>
         </div>
