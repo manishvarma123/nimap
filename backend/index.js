@@ -7,6 +7,8 @@ dotenv.config();
 
 const app = express();
 
+app.get('/',()=>console.log('server is running'))
+
 app.use(cors());
 app.use('/api/v1/movies',router)
 

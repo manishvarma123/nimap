@@ -2,6 +2,8 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import MainLayout from './Components/MainLayout'
 import Home from './Components/Home'
+import TopRated from './Components/TopRated'
+import Upcoming from './Components/Upcoming'
 
 
 const router = createBrowserRouter([
@@ -12,6 +14,14 @@ const router = createBrowserRouter([
       {
         path : '/',
         element : <Home />
+      },
+      {
+        path : '/top-rated',
+        element : <TopRated />
+      },
+      {
+        path : '/upcoming',
+        element : <Upcoming />
       }
     ]
   }

@@ -3,7 +3,7 @@ import { movieModel } from "../models/movieModel.js"
 
 const getUpcoming = async (req,res) => {
     try {
-        const movies = await movieModel.find().sort({startYear : -1}).limit(48).select('title primaryImage averageRating startYear');
+        const movies = await movieModel.find().select('title primaryImage averageRating startYear').sort({startYear : -1}).limit(48);
 
         if(!movies){
             throw new Error('failed to retrieve upcoming movies')

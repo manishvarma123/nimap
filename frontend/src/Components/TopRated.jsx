@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import axios from 'axios'
 
-const Home = () => {
+const TopRated = () => {
 
   const [data,setData] = useState([])
 
@@ -10,7 +10,7 @@ const Home = () => {
 
     const popularmovie =async () => {
       try {
-        const res = await axios.get('https://nimap.onrender.com/api/v1/movies/popular');
+        const res = await axios.get('https://nimap.onrender.com/api/v1/movies/top-rated');
         setData(res.data.data)
         console.log(res)
 
@@ -23,7 +23,6 @@ const Home = () => {
     
   },[])
 
-  const arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
   return (
     <div className='py-10 w-full h-full'>
       <div className="m-auto w-full h-full flex justify-center gap-16 flex-wrap">
@@ -41,4 +40,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default TopRated
